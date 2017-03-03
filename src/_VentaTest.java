@@ -42,14 +42,12 @@ public class _VentaTest {
 	}
 	
 	@Test
-	public void costoDeDosProductoArticuloYServicio()
+	public void costoDeDosProductoArticuloYUnServicio()
 	{
 		Venta store = new Venta();
 		store.addProduct(aspiradora);
 		store.addProduct(aspirado);
-		assertEquals(120.0,store.total(),0.01);
-		
-		
+		assertEquals(120.0,store.total(),0.01);	
 	}
 	
 
