@@ -1,20 +1,21 @@
-
+import java.util.ArrayList;
 
 public class Venta implements Product {
-	Product[] productos = {};
+	
+	ArrayList <Product> productos= new ArrayList <Product> ();
 	
 
 	public Venta(){}
 	
 	public int cantidadDeProductos(){
-		return productos.length;
+		return productos.size();
 	}
 	
 	public void addProduct(Product newProducto){
-		productos[cantidadDeProductos()]=newProducto;
+		productos.add(newProducto);
 	}
 
-	@Override
+	
 	public double total() {
 		// TODO Auto-generated method stub
 		return 0;
