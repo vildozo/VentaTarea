@@ -12,6 +12,6 @@ public class Servicio implements Product{
 
 	
 	public double total() {
-		return horas*precio;
+		return horas*precio*0.2;
 	}
 }

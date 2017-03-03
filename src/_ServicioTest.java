@@ -13,9 +13,9 @@ public class _ServicioTest {
 	@Test
 	public void aspiradoDe2Horas() {
 		double tiempo=2;
-		double costo=40;
+		double costo=50;
 		Product aspirado = new Servicio(tiempo,costo);
-		assertEquals(80.0,aspirado.total(),0.01);
+		assertEquals(20.0,aspirado.total(),0.01);
 	}
 
 }
