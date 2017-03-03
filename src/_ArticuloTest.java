@@ -10,16 +10,16 @@ public class _ArticuloTest{
 	@Test
 	public void ceroArticulo() {
 		Product mouse= new Articulo();
-		assertEquals(0, mouse.total());
+		assertEquals(0, mouse.total(),0.01);
 	}
 	
 	
 	@Test
 	public void unArticulo() {
-		int cantidad=3;
-		int precio=8;
+		double cantidad=3;
+		double precio=8;
 		Product mouse= new Articulo(precio,cantidad);
-		assertEquals(24, mouse.total());
+		assertEquals(24, mouse.total(),0.01);
 	}
 
 }

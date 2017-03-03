@@ -1,6 +1,6 @@
 
 
 public interface Product {
-	public int total();
+	public double total();
 
 }

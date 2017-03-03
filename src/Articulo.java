@@ -1,21 +1,21 @@
 
 
 public class Articulo implements Product{
-	int precio=0;
-	int cantidad=0;
+	double precio=0;
+	double cantidad=0;
 	
 	public Articulo(){
 
 	}
 	
 	
-	public Articulo(int price, int quantity){
+	public Articulo(double price, double quantity){
 		this.precio=price;
 		this.cantidad=quantity;
 	}
 	
 	
-	public int total() {
+	public double total() {
 		// TODO Auto-generated method stub
 		return precio*cantidad;
 	}
