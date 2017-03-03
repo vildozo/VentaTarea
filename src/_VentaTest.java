@@ -4,6 +4,14 @@ import org.junit.Test;
 
 public class _VentaTest {
 
+	
+	double tiempo=2;
+	double costo=50;
+	double cantidad=2;
+	Product aspirado = new Servicio(tiempo,costo);
+	Product aspiradora = new Articulo(costo,cantidad);
+	
+	
 	@Test
 	public void noTenemosProductos() {
 		Venta store = new Venta();
@@ -11,11 +19,8 @@ public class _VentaTest {
 	}
 	
 	@Test
-	public void agregarUnProductoAVenta() {
+	public void agregarUnProductoAVenta() {	
 		Venta store = new Venta();
-		double tiempo=2;
-		double costo=50;
-		Product aspirado = new Servicio(tiempo,costo);
 		store.addProduct(aspirado);
 		assertEquals(1,store.cantidadDeProductos());
 	}
@@ -24,9 +29,6 @@ public class _VentaTest {
 	public void costoDeUnProductoServicio()
 	{
 		Venta store = new Venta();
-		double tiempo=2;
-		double costo=50;
-		Product aspirado = new Servicio(tiempo,costo);
 		store.addProduct(aspirado);
 		assertEquals(20,store.total(),0.01);
 	}
@@ -35,9 +37,6 @@ public class _VentaTest {
 	public void costoDeUnProductoArticulo()
 	{
 		Venta store = new Venta();
-		double cantidad=2;
-		double costo=50;
-		Product aspiradora = new Articulo(costo,cantidad);
 		store.addProduct(aspiradora);
 		assertEquals(100,store.total(),0.01);
 	}
@@ -46,13 +45,7 @@ public class _VentaTest {
 	public void costoDeDosProductoArticuloYServicio()
 	{
 		Venta store = new Venta();
-		double cantidad=2;
-		double costo=50;
-		Product aspiradora = new Articulo(costo,cantidad);
 		store.addProduct(aspiradora);
-		double tiempo=2;
-		costo=50;
-		Product aspirado = new Servicio(tiempo,costo);
 		store.addProduct(aspirado);
 		assertEquals(120.0,store.total(),0.01);
 		
