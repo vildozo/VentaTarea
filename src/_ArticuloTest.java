@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class ArticuloTest{
+public class _ArticuloTest{
 
 	@Test
 	public void ceroArticulo() {
