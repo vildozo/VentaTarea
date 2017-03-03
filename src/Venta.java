@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Venta implements Product {
 	
 	ArrayList <Product> productos= new ArrayList <Product> ();
+	double costoTotal=0.0;
 	
 
 	public Venta(){}
@@ -17,8 +18,11 @@ public class Venta implements Product {
 
 	
 	public double total() {
-		// TODO Auto-generated method stub
-		return 0;
+		for(int contadorProductos=0;contadorProductos<productos.size();contadorProductos++)
+		{
+			costoTotal+=productos.get(contadorProductos).total();
+		}
+		return costoTotal;
 	}
 	
 	
