@@ -37,9 +37,26 @@ public class _VentaTest {
 		Venta store = new Venta();
 		double cantidad=2;
 		double costo=50;
-		Product aspirado = new Articulo(costo,cantidad);
-		store.addProduct(aspirado);
+		Product aspiradora = new Articulo(costo,cantidad);
+		store.addProduct(aspiradora);
 		assertEquals(100,store.total(),0.01);
+	}
+	
+	@Test
+	public void costoDeDosProductoArticuloYServicio()
+	{
+		Venta store = new Venta();
+		double cantidad=2;
+		double costo=50;
+		Product aspiradora = new Articulo(costo,cantidad);
+		store.addProduct(aspiradora);
+		double tiempo=2;
+		costo=50;
+		Product aspirado = new Servicio(tiempo,costo);
+		store.addProduct(aspirado);
+		assertEquals(120.0,store.total(),0.01);
+		
+		
 	}
 	
 
